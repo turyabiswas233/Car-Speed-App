@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#red1 , #red2{
+    color: #cf4539;
+    font-weight: 600;
+}
+
+.bomb-blast {
+    transition: all 100ms ease-in;
+    border-radius: 10px;
+    padding: 3px;
+    animation: borderCol 250ms linear infinite alternate;
+}
+
+div {
+    width: 80%;
+    text-align: center;
+}
+
+div p {
+    border-radius: 8px;
+}
+
+div.text {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.text p {
+    width: fit-content;
+    padding: .65rem 1rem;
+    color: #0056f7;
+    margin-top: 15px;
+}
+
+div.text p.speed {
+    border: 1px solid #0056f7;
+    box-shadow: 0 0 8px #0056f7, inset 0 0 8px #0056f7;
+}
+
+div.text p:first-child {
+    margin-top: 0;
+}
+
+div.btn {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-between;
+    font-size: 1.35rem;
+}
+
+div.btn p {
+    padding: .65rem 1rem;
+}
+div.btn p::selection{
+    color: none;
+    background-color: transparent;
+}
+
+div.btn p:first-child {
+    color: #0f0;
+    border: 1px solid #0f0;
+    box-shadow: 0 0 8px #0f0, inset 0 0 8px #0f0;
+}
+
+div.btn p:last-child {
+    color: #ff6347;
+    border: 1px solid #ff6347;
+    box-shadow: 0 0 8px #ff6347, inset 0 0 8px #ff6347;
+}
+
+div.btn p:hover {
+    cursor: pointer;
+}
+
+/* animation */
+
+@keyframes borderCol {
+    from {
+        border: 2px solid red;
+        transform: scale(1) ;
+    }
+    to {
+        border: 2px solid transparent;
+        transform: scale(1.15);
+    }
+}
+
+/* grade speed style */
+
+
+
+#grad {
+    text-transform: uppercase;
+    text-decoration: underline
+    
+    ;
+    font-weight: 600;
+}
+
+.grade-slow {
+    border: 1px solid #0056f7;
+    box-shadow: 0 0 8px #0056f7, inset 0 0 8px #0056f7;
+}
+
+.grade-normal {
+    border: 1px solid #00cc3f;
+    box-shadow: 0 0 8px #00cc3f, inset 0 0 8px #00cc3f;
+}
+
+.grade-faster {
+    border: 1px solid #ef783f;
+    box-shadow: 0 0 8px #ef783f, inset 0 0 8px #ef783f;
+}
+
+.grade-overspeed {
+    border: 1px solid #ea3400;
+    box-shadow: 0 0 8px #ea3400, inset 0 0 8px #ea3400;
+}
+
+div.text p::selection {
+    color: black;
+    background-color: #0051ff;
+}
